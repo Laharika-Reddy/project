@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="trail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav id="nav"> 
+              <h1>PORTFOLIO</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <div class="header-text">
+                <h1>Hi, It's Me <span>Gandhari Harshitha</span><br>From India</h1>
+                <p>Power Platform Developer</p> 
+            </div>
+        </div>  
+      </div>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="harshitha.jpg" alt="Harshitha Photo">
+            </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About Me</h1>
+              <p>I'm a Power Platform Developer, excited to tackle real-world challenges...</p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="openTab('Skills')">Skills</p>
+                <p class="tab-links" onclick="openTab('Experience')">Experience</p> 
+              </div>
+              <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                  <li><span>Power Platform Developer</span><br>Low-code Development</li>
+                  <li><span>Power App Developer</span><br>Builds Custom Business Apps</li>
+                  <li><span>Power Automate</span><br>Automate Business Processes</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="Experience">
+                <ul>
+                  <li><span>August 2024 - Present</span><br>Junior Power App Developer Intern at Sreeman Solutions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+          <h1 class="sub-title">My Services</h1> 
+          <div class="services-list">
+            <div>
+              <h2>Power App Developer</h2>
+              <p>Designs and builds custom business applications...</p>
+              <a href="#">Learn more</a>
+            </div>
+            <div>
+              <h2>Power Automate</h2>
+              <p>Automates business processes using low-code tools...</p>
+              <a href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="worklist">
+                    <div class="work">
+                        <img src="portfoliopic.jpg" alt="Portfolio Image">
+                        <div class="layer">
+                            <h3>PORTFOLIO</h3>
+                            <p>Developed a portfolio project with an elegant design...</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+              <p><i class="fa-solid fa-phone"></i> 3366885522</p>
+              <div class="social-icons">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+              <a href="#" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+              <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- JavaScript -->
+      <script>
+        function openTab(tabName) {
+            var i, tabContents, tabLinks;
+            
+            // Hide all tab contents
+            tabContents = document.getElementsByClassName("tab-contents");
+            for (i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active-tab");
+            }
+            
+            // Remove active class from all tab links
+            tabLinks = document.getElementsByClassName("tab-links");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active-link");
+            }
+            
+            // Show the current tab and add the active class to the clicked link
+            document.getElementById(tabName).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+        }
+    </script>
+    
+</body>
+</html>
